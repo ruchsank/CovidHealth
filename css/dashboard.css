@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&display=swap');
+
+* {
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    background-color: white;
+}
+
+main {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.covid-tracker {
+    width: 95%;
+    margin: 20px auto;
+}
+
+.section-title {
+    color: #BCFD4C;
+    margin: 5px 10px 10px 5px;
+    text-align: center;
+}
+
+.section-instructions {
+    color: #000101;
+    opacity: 0.5;
+    font-size: 13px;
+    margin: 5px 10px 10px 5px;
+    text-align: center;
+}
+
+
+/* COUNTRY CARD */
+
+#country-card {
+    margin: 20px auto;
+    background: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+}
+
+.top-wrap {
+    display: flex;
+    border-bottom: 2px solid rgb(255 255 255 / 0.1);
+    padding-bottom: 10px;
+    padding-left: 500px;
+}
+
+.top-details-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+}
+
+.main-title {
+    display: block;
+    font-size: 10px;
+    opacity: 0.4;
+}
+
+.bottom-wrap {
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.info-box {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0 20px 20px 0;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+}
+
+.info-box-title {
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.info-box-stat {
+    font-weight: 500;
+}
+
+
+/* INFO BOX COLORS */
+
+.per_million .info-box-stat {
+    opacity: 0.8;
+}
+
+.active .info-box-stat {
+    color: #fbaa85;
+}
+
+.cases .info-box-stat {
+    color: #f7d48d;
+}
+
+.critical .info-box-stat {
+    color: #f09393;
+}
+
+.deaths .info-box-stat {
+    color: #ea6565;
+}
+
+.recovered .info-box-stat {
+    color: #2de6b5;
+}
+
+.tests .info-box-stat {
+    color: #7e74ad;
+}
+
+
+/* COUNTRY LIST */
+
+#countries_table {
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+}
+
+thead th {
+    background-color: whitesmoke;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+}
+
+thead th,
+tbody th {
+    padding: 10px;
+}
+
+tbody th {
+    font-weight: normal;
+    background-color: whitesmoke;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+}
+
+.country-display {
+    cursor: pointer;
+}
+
+tbody th:first-child {
+    display: flex;
+    align-items: center;
+    color: #fb6f81;
+    font-size: 12px;
+}
+
+
+tbody th:hover {
+    font-weight: bold;
+    transition-property: all;
+}
+
+.country-img {
+    width: 10%;
+    margin-right: 5px;
+}
+
+@media (max-width: 1112px) {
+    .bottom-wrap {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 736px) {
+    .bottom-wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .top-wrap {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .top-details-wrap div {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 834px) {
+    th:not(:first-child) {
+        display: none;
+    }
+}
+
+@media (max-width: 667px) {
+    .bottom-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
